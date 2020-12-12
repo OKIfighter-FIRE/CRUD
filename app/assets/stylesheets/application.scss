@@ -13,7 +13,13 @@
  *= require_tree .
  *= require_self
  */
-div.field_with_errors {
+@import "bootstrap/scss/bootstrap";
+
+$fa-font-path: '@fontawesome/fontawesome-free/webfonts';
+@import "@fontawesome/fontawesome-free/scss/fontawesome";
+@import "@fontawesome/fontawesome-free/scss/regular";
+
+.field_with_errors {
   display: contents;
 
   input {
