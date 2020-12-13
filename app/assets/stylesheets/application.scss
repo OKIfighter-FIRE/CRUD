@@ -15,14 +15,45 @@
  */
 @import "bootstrap/scss/bootstrap";
 
-$fa-font-path: '@fontawesome/fontawesome-free/webfonts';
-@import "@fontawesome/fontawesome-free/scss/fontawesome";
-@import "@fontawesome/fontawesome-free/scss/regular";
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/regular";
 
 .field_with_errors {
   display: contents;
 
-  input {
-    border: 2px solid red;
+  input,
+  textarea {
+    @extend .is-invalid;
   }
+}
+
+.base-container {
+  @extend .container-fluid;
+  max-width: var(--breakpoint-lg);
+  padding: 30px 15px;
+}
+
+body {
+  padding-top: 56px;
+}
+
+// テーブル
+th,
+td {
+  vertical-align: middle !important;
+}
+
+.break-word {
+  word-break: break-word;
+}
+
+// フラッシュ
+
+.alert-success {
+  @extend .alert-success;
+}
+
+.alert-alert {
+  @extend .alert-danger;
 }
